@@ -1,0 +1,14 @@
+version: '2'
+
+networks:
+  front:
+    external: true
+  back:
+    external: true
+
+services:
+  pma:
+    image: phpmyadmin/phpmyadmin:4.6
+    networks:
+      - front
+      - back

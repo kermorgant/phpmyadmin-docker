@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  pma:
+    expose:
+      - "80"
+    env_file:
+      - /etc/docker/pma.env
+      - /etc/docker/common.env
+    environment:
+      - VIRTUAL_HOST=pma.kgtech.fi

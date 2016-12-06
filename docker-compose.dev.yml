@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  pma:
+    # ports:
+    #   - "8080:80"
+    expose:
+      - "80"
+    env_file:
+      - ./pma.priv.env
+    environment:
+      - VIRTUAL_HOST=pma.local
